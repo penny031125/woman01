@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<title>pie-chart test | amCharts</title>
+		<meta name="description" content= />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"innerRadius": 1,
+					"labelRadiusField": "country",
+					"minRadius": 14,
+					"colors": [
+						"#AAAAAA",
+						"#227700",
+						"#cd82ad",
+						"#2f4074",
+						"#AA7700",
+						"#b7b83f",
+						"#b9783f",
+						"#b93e3d",
+						"#913167"
+					],
+					"labelColorField": "#FFFFFF",
+					"marginBottom": 12,
+					"titleField": "country",
+					"valueField": "litres",
+					"fontSize": 12,
+					"theme": "light",
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"country": "無黨籍",
+							"litres": "766"
+						},
+						{
+							"country": "民進黨",
+							"litres": "27"
+						},
+						{
+							"country": "其他",
+							"litres": "2"
+						},
+						{
+							"country": "國民黨",
+							"litres": "234"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
